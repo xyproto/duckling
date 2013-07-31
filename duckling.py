@@ -21,6 +21,7 @@ USE_PSYCO = True
 USE_BUFFER = False
 USE_PBUFFER = True
 USE_HWACCEL = False
+USE_FULLSCREEN = True
 
 # --- Info and intelligent imports ---
 
@@ -81,7 +82,9 @@ class GameInfo(sprite.Group):
 
 RES = Resolution(*RES)
 
-FLAGS = FULLSCREEN
+FLAGS = 0
+if USE_FULLSCREEN:
+    FLAGS = FLAGS | FULLSCREEN
 if USE_HWACCEL:
     FLAGS = FLAGS | HWACCEL
 if USE_PBUFFER:
