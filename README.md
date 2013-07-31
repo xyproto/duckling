@@ -12,6 +12,8 @@ Use the arrow keys to move and space to fire.
 
 Requires Python 2 and Pygame. Can use Psyco.
 
+Has particle effects!
+
 Screenshots
 -----------
 
