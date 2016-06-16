@@ -1,7 +1,9 @@
 duckling
 ========
 
-A little Python project I slapped together back in May 2004.
+This is a weird platform game sandbox without a goal.
+
+It's a little Python program I slapped together back in May 2004.
 
 * Version: 0.1
 * License: MIT
@@ -10,9 +12,9 @@ A little Python project I slapped together back in May 2004.
 
 Use the arrow keys to move and space to fire.
 
-Requires Python 2 and Pygame. Can use Psyco.
-
-Has particle effects!
+* Requires Python 2 and Pygame.
+* Can use the Psyco module.
+* Has particle effects.
 
 Screenshots
 -----------
