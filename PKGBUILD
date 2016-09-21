@@ -1,7 +1,7 @@
 # Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
 
 pkgname=duckling-git
-pkgver=5afe86a
+pkgver=6b6eb7c
 pkgrel=1
 pkgdesc='Weird 2D platform game'
 arch=('x86_64' 'i686')
@@ -25,7 +25,7 @@ prepare() {
   cd "${pkgname%-git}"
 
   setconf duckling.py GFX_DIR "\"$_gfxdir\""
-  gendesk -n --pkgname duckling --pkgdesc "$pkgdesc"
+  gendesk -f -n --pkgname duckling --pkgdesc "$pkgdesc"
 }
 
 package() {
