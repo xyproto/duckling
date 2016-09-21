@@ -1,14 +1,14 @@
-# Maintainer: Alexander Rødseth <rodseth@gmail.com>
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
 
 pkgname=duckling-git
-pkgver=18b35a8
+pkgver=5afe86a
 pkgrel=1
-pkgdesc='Tiny unfinished 2D platform game'
+pkgdesc='Weird 2D platform game'
 arch=('x86_64' 'i686')
 url='http://github.com/xyproto/duckling'
 license=('MIT')
 depends=('python2' 'python2-pygame')
-makdepends=('setconf' 'gendesk')
+makdepends=('setconf' 'gendesk' 'git')
 conflicts=('duckling')
 provides=('duckling')
 source=('duckling::git://github.com/xyproto/duckling.git')
@@ -16,20 +16,20 @@ md5sums=('SKIP')
 _gfxdir='/usr/share/duckling/gfx'
 
 pkgver() {
-  cd "$srcdir/${pkgname%-git}"
+  cd "${pkgname%-git}"
 
   git describe --always | sed 's|-|.|g'
 }
 
 prepare() {
-  cd "$srcdir/${pkgname%-git}"
+  cd "${pkgname%-git}"
 
   setconf duckling.py GFX_DIR "\"$_gfxdir\""
   gendesk -n --pkgname duckling --pkgdesc "$pkgdesc"
 }
 
 package() {
-  cd "$srcdir/${pkgname%-git}"
+  cd "${pkgname%-git}"
 
   install -d "${pkgdir}$_gfxdir"
   install -Dm644 gfx/* "${pkgdir}$_gfxdir"
