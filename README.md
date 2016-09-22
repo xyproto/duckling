@@ -8,10 +8,9 @@ Instructions
 
 Use the arrow keys to move and space to fire.
 
-* Requires Python 2 and Pygame.
+* Requires Python 2 and SDL/Pygame.
 * Can use the Psyco module.
 * Has particle effects.
-* Can shoot upwards too.
 
 Screenshot
 ----------
