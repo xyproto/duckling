@@ -1,5 +1,5 @@
-duckling
-========
+py2sprites
+==========
 
 Weird platform game sandbox without a goal.
 
